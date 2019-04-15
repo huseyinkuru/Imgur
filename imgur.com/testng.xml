@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.imgur.utils.Utils"/>
+      <class name="com.imgur.test.RandomModeTest"/>
+      <class name="com.imgur.test.SearchTest"/>
+      <class name="com.imgur.test.NewPostTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
