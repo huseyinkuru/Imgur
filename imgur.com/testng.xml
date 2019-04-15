@@ -3,7 +3,6 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.imgur.utils.Utils"/>
       <class name="com.imgur.test.RandomModeTest"/>
       <class name="com.imgur.test.SearchTest"/>
       <class name="com.imgur.test.NewPostTest"/>

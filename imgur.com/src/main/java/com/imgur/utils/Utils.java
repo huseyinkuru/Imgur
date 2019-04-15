@@ -51,10 +51,16 @@ public class Utils {
 	}
 
 	
-	public Utils(String browser) throws IOException, AWTException {
-		FileInputStream fis=new FileInputStream("/Users/huseyinkuru/Documents/Tempus/imgur.com/src/main/java/com/imgur/utils/settings.properties");;
-		properties = new Properties();
-		properties.load(fis);
+	public Utils(String browser) throws AWTException {
+		
+		try {
+			FileInputStream fis=new FileInputStream("/Users/huseyinkuru/Documents/Tempus/imgur.com/src/main/java/com/imgur/utils/settings.properties");;
+			properties = new Properties();
+			properties.load(fis);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
 		robot = new Robot();
 		
 		if(browser.equals("chrome")) { 
@@ -66,6 +72,7 @@ public class Utils {
 			System.out.println(getFirefoxPath());
 			System.setProperty("webdriver.gecko.driver", getFirefoxPath());
 			driver = new FirefoxDriver();
+		
 		}
 	}
 	
